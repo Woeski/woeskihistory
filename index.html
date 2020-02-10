@@ -1,12 +1,131 @@
 <head><title>Woeski history</title>
 <style>
-  body  {
-font-family: "IM FELL DW Pica PRO","Bookman Old Style", "Times New Roman";
-color: white;
-    background-color: C7AB84;
-  }
+body {
+	position: relative;
+	font-family: 'IM Fell DW Pica PRO', 'Baskerville Old Face', serif;
+	background-color: #333319;
+	color: #e5ffff;
+	font-size: 16pt;
+	height: 100%;
+	margin: 0;
+}
+    .slides-container {
+        max-width: 700px;
+        max-height: 200px;
+        position: relative;
+        margin: auto;
+    }
+    .prev {
+  cursor: pointer;
+  position: absolute;
+  top: 220%;
+  left: 10%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  transition: 0.6s ease;
+  border-radius: 0 2px 2px 0;
+  user-select: none;
+}
+    .next {
+          cursor: pointer;
+  position: absolute;
+  top: 220%;
+  right: 10%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  transition: 0.6s ease;
+  border-radius: 0 2px 2px 0;
+  user-select: none;
+    }
+    .prev:hover, .next:hover {
+  background-color: black;
+}
+    
+    .text {
+       color: white;
+  font-size: 16pt;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center; 
+
+    }
+    
+    
 </style>
 </head>
 <body>
-<h1>2Ch | Woeski's history webpage!</h1>
+<center><h1>- 2Ch | Woeski's history webpage -</h1></center>
+    <br>
+    <div class="content">
+        
+    <center>
+    <div class="slides-container">
+        <div class="my-slides">
+            <img src="Afbeeldingen/22-aout-colorisee-02_La_Marne.jpg" style="width: 100%">
+            <div class="caption">22 of August 1914 French Poilus at the Marne </div>
+        </div>
+        
+        <div class="my-slides">
+            <img src="Afbeeldingen/2Ch_charleroi_caserne_tr%C3%A8sisgnes.jpg" style="width: 100%">
+            <div class="caption">Caserne de Charleroi.</div>
+        </div>
+        
+        <div class="my-slides">
+            <img src="Afbeeldingen/ACM_in_Rusland.jpg" style="width: 100%">
+            <div class="caption">ACM corps in Russia.</div>
+        </div>
+        
+        <div class="my-slides">
+            <img src="Afbeeldingen/alexandrov_choir.jpg" style="width: 100%">
+            <div class="caption">Awesome S-W-A-G.</div>
+        </div>
+        <span style="font-size: 32pt;">
+        <a class="prev" onclick="plusSlides(-1)">&lt;</a> 
+        <a class="next" onclick="plusSlides(1)">&gt;</a>
+        
+        </span>
+    </div>
+    </center>
+    <div class="text">
+    
+    </div>
+    <div class="footer">
+    
+    </div>
+    
+    </div>
+    <script>
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("my-slides");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+        
+        
+    </script>
+
+    
 </body>
